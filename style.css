@@ -30,6 +30,11 @@ header{
 form{
     height: 20vh;
     font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 p{
@@ -38,8 +43,9 @@ p{
 }
 
 .input{
+    width: 65vw;
     display: flex;
-    min-width: 65vw;
+    justify-content: center;
 }
 
 label{
@@ -47,8 +53,7 @@ label{
 }
 
 .note-input{
-    display: flex;
-    width: 100%;
+    flex: 1;
     height: 65px;
     justify-content: flex-start;
     margin: 0;
@@ -70,4 +75,27 @@ label{
 
 .add-note-button:hover{
     background: rgb(88, 161, 3, 0.9)
+}
+
+.output-div{
+    margin-top: 2.5rem;
+    width: 65vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    column-gap: 35px;
+    row-gap: 20px;
+
+}
+
+.new-note{
+    box-sizing: border-box;
+    height: 100px;
+    padding: 5px;
+
+    border: 0.5px solid gray;
+    border-radius: 10px;
 }

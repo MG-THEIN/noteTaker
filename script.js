@@ -1,11 +1,16 @@
 const inputNote = document.querySelector('.note-input')
-const outputList = document.querySelector('.note-list')
+const outputNote = document.querySelector('.output-div')
 const addNewNoteBtn = document.querySelector('.add-note-button')
 
 addNewNoteBtn.addEventListener('click', addNewNoteFun);
 
 function addNewNoteFun(e){
     e.preventDefault();
-    alert("This works");
+    const newNote = document.createElement("div");
+    newNote.classList.add("new-note");
+    newNote.innerHTML = inputNote.value;
+
+
+    outputNote.appendChild(newNote)
     
 }
