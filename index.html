@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-compitable" content="ie=edge">
-<title>Expense Tracker</title>
+<title>Note Taking App</title>
 
 <link href="style.css" rel="stylesheet">
 <script src="script.js" defer></script>
@@ -12,19 +12,25 @@
 <body>
 
 <header>
-    <h1>Expense Tracker</h1>
+    <h1>Note Taker</h1>
 </header>
 
 <form>
 
-    <p>Add new Note:<p>
+    <p class="green-text">Add new Note:<p>
 
     <hr>
     
-    <div class="input">
+    <div class="head">
+    <label for="note-head">Head:</label>
+    <input type="text" class="note-head">
+    </div>
 
+    <hr>
+
+    <div class="input">
     <label for="note">Note:</label>
-    <textarea class="note-input" placeholder="Write your note here"></textarea>
+    <textarea class="note-input" placeholder="Write your note here">God save us</textarea>
     </div>
 
     <hr>

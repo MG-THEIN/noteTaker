@@ -28,7 +28,7 @@ header{
 }
 
 form{
-    height: 20vh;
+    height: 30vh;
     font-size: 1.5rem;
     display: flex;
     justify-content: center;
@@ -37,9 +37,15 @@ form{
     margin-right: auto;
 }
 
-p{
+.green-text{
     margin-bottom: 10px;
     color: rgb(7, 160, 65)
+}
+
+.head{
+    width: 65vw;
+    display: flex;
+    justify-content: center;
 }
 
 .input{
@@ -52,9 +58,16 @@ label{
     margin-right: 7px;
 }
 
+.note-head{
+    flex: 1;
+    margin:0;
+    padding: 7px;
+    font-size: 1.15rem;
+}
+
 .note-input{
     flex: 1;
-    height: 65px;
+    height: 55px;
     justify-content: flex-start;
     margin: 0;
     padding: 7px;
@@ -86,6 +99,7 @@ label{
     display:grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    justify-content: space-between;
     column-gap: 35px;
     row-gap: 20px;
 
@@ -93,9 +107,38 @@ label{
 
 .new-note{
     box-sizing: border-box;
-    height: 100px;
-    padding: 5px;
+    height: 140px;
+    padding: 0 0 0 8px;
 
     border: 0.5px solid gray;
-    border-radius: 10px;
+    border-radius: 5px;
+    text-decoration-color: none;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.view-detail-btn{
+    background: rgba(20, 58, 230, 0.75);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    height: 2rem;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.view-detail-btn:hover{
+    background: rgba(20, 58, 230, 0.9);
+}
+
+.hidden-text{
+    margin: 0 15px 0 0;
+    height: 37px;
+    overflow: hidden;
+    max-width: 40ch;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
