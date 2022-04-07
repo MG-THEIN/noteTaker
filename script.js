@@ -27,6 +27,7 @@ outputNote.addEventListener('click', openModal);
 
 function openModal(e){
     e.preventDefault();
+
     const item = e.target;
     if (item.classList == "view-detail-btn") {
         let itemParent = item.parentElement;
@@ -35,12 +36,23 @@ function openModal(e){
         
         const modal = document.createElement("div");
         modal.classList.add("modal");
-        modal.innerHTML = `<button class="close-model"><i class="fa-solid fa-xmark"></i></button>
+        modal.innerHTML = `<button class="close-modal"><i class="fa-solid fa-xmark"></i></button>
                            <h3>${modalText1}</h3>
                            <p>${modalText2}</p>`;
 
        modalContainer.classList.add("show-modal");
 
        modalContainer.appendChild(modal);
+
+    }
+}
+
+modalContainer.addEventListener('click', closeModal);
+function closeModal(ev){
+    ev.preventDefault();
+    const item2 = ev.target;
+    if (item2.classList == "close-modal"){
+        modalContainer.innerHTML = '';
+        modalContainer.classList.remove("show-modal");
     }
 }

@@ -174,10 +174,20 @@ label{
 
 }
 
-.close-model{
+.close-modal{
     background: white;
-    color: rgb(236, 12, 23, 0.75);
+    color: rgba(209, 10, 20, 0.75);
     border: none;
-    font-size: 2rem;
+    font-size: 1.65rem;
     border-radius: 7px;
+    margin-left: 100%;
+    margin-bottom: 0;
+}
+
+.close-modal:hover{
+    color: rgba(209, 10, 20, 0.95);
+}
+
+.fa-xmark{
+    pointer-events: none;
 }
