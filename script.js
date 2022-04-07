@@ -2,6 +2,7 @@ const inputHead = document.querySelector('.note-head');
 const inputNote = document.querySelector('.note-input');
 const outputNote = document.querySelector('.output-div');
 const addNewNoteBtn = document.querySelector('.add-note-button')
+const modalContainer = document.querySelector('.modal-container');
 
 addNewNoteBtn.addEventListener('click', addNewNoteFun);
 
@@ -34,10 +35,12 @@ function openModal(e){
         
         const modal = document.createElement("div");
         modal.classList.add("modal");
-        modal.innerHTML = `<p class="bold">${modalText1}</p>
+        modal.innerHTML = `<button class="close-model"><i class="fa-solid fa-xmark"></i></button>
+                           <h3>${modalText1}</h3>
                            <p>${modalText2}</p>`;
 
-    
-    
+       modalContainer.classList.add("show-modal");
+
+       modalContainer.appendChild(modal);
     }
 }
