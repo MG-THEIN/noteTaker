@@ -153,6 +153,7 @@ label{
     pointer-events: none;
     width: 100vw;
     height: 100vh;
+    transition: all 0.3s ease;
 
 }
 

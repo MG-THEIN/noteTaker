@@ -8,6 +8,8 @@ addNewNoteBtn.addEventListener('click', addNewNoteFun);
 
 function addNewNoteFun(e){
     e.preventDefault();
+
+    if (inputHead.value == "" || inputNote.value == "") return;
     const newNote = document.createElement("div");
     newNote.classList.add("new-note");
     newNote.innerHTML = `   <p class="bold">${inputHead.value}</p>
@@ -20,6 +22,9 @@ function addNewNoteFun(e){
     newNote.appendChild(viewDetailBtn)
 
     outputNote.appendChild(newNote)
+
+    inputHead.value = '';
+    inputNote.value = '';
     
 }
 
